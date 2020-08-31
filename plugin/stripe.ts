@@ -1,8 +1,8 @@
 // cordova-plugin-stripe
 import { Injectable, NgZone } from '@angular/core';
 
-import { Observable } from 'rxjs/Observable';
-import { mergeMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { map, catchError ,mergeMap } from 'rxjs/operators';
 
 import { Cordova, ZoneObservable } from '../';
 

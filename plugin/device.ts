@@ -1,8 +1,9 @@
 // cordova-plugin-device
 import { Injectable, NgZone } from '@angular/core';
 
-import { Observable } from "rxjs";
-import { mergeMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import 'rxjs/add/operator/mergeMap';
+import { map, catchError ,mergeMap } from 'rxjs/operators';
 
 import { Cordova, ZoneObservable } from '../';
 

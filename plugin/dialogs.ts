@@ -1,8 +1,8 @@
 // cordova-plugin-dialogs
 import { Injectable, NgZone } from '@angular/core';
 
-import { Observable } from "rxjs";
-import { mergeMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { map, catchError ,mergeMap } from 'rxjs/operators';
 
 import { Cordova, ZoneObservable } from '../';
 

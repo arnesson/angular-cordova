@@ -1,14 +1,14 @@
 // cordova-plugin-keyboard
 import { Injectable, NgZone } from '@angular/core';
 
-import { Observable } from "rxjs";
-import { mergeMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { map, catchError ,mergeMap } from 'rxjs/operators';
 
 import { Cordova, ZoneObservable } from '../';
 
 @Injectable()
 export class KeyboardService {
-    constructor(private zone: NgZone) { }
+    constructor(private zone: NgZone) {}
 
     keyboardDidShow: Observable<any> = ZoneObservable.create(this.zone, (observer: any) => {
         (<any>window).addEventListener('keyboardDidShow', observer.next, false);
