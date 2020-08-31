@@ -1,9 +1,8 @@
 // cordova-plugin-camera
 import { Injectable, NgZone } from '@angular/core';
 
-import { Observable } from "rxjs";
-
-import { mergeMap } from 'rxjs/operators';
+import { Observable , from} from 'rxjs';
+import { map, catchError ,mergeMap } from 'rxjs/operators';
 
 import { Cordova, ZoneObservable } from '../';
 

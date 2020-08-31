@@ -1,9 +1,9 @@
 // cordova-plugin-battery-status
 import { Injectable, NgZone } from '@angular/core';
 
-import { Observable } from "rxjs";
+import { Observable } from 'rxjs';
 
-import { ZoneObservable } from '../';
+import { Cordova, ZoneObservable } from '../';
 
 @Injectable()
 export class BatteryStatusService {

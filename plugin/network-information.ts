@@ -1,8 +1,8 @@
 //cordova-plugin-network-information
 import { Injectable, NgZone } from '@angular/core';
 
-import { Observable } from "rxjs";
-import { mergeMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { map, catchError ,mergeMap } from 'rxjs/operators';
 
 import { Cordova, ZoneObservable } from '../';
 
@@ -19,7 +19,7 @@ export enum Connection {
 
 @Injectable()
 export class NetworkInformationService {
-  constructor(private zone: NgZone) { }
+  constructor(private zone: NgZone) {}
 
   online(): Observable<any> {
     return Cordova.deviceready.pipe(mergeMap(() =>
