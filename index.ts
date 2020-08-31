@@ -1,7 +1,7 @@
 import { NgZone } from '@angular/core';
 
-import { Observable } from 'rxjs/Observable';
-import { share } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import {debounce, share} from 'rxjs/operators';
 
 export namespace Cordova {
     export const platformId: string = (<any>window).cordova.platformId;
@@ -14,7 +14,7 @@ export namespace Cordova {
         return () => {
             (<any>document).removeEventListener('deviceready', fn, false);
         };
-    }).pipe(share());
+    }).pipe(share())
 
     deviceready.subscribe();
 }
